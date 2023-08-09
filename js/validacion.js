@@ -7,9 +7,9 @@ function showAlertError() {
 } 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const Button = document.getElementById("regBtn");
+    const btn = document.getElementById("btn");
 
-    Button.addEventListener("click", function () {
+    btn.addEventListener("click", function () {
         const nombre = document.getElementById("nombre").value;
         const apellido = document.getElementById("apellido").value;
         const email = document.getElementById("email").value;
@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const terminos = document.getElementById("terminos").checked;
 
         validarDatosIngresados(nombre, apellido, email, password1, password2, terminos);
+       document.getElementById("formulario").reset();
+       
     });
 });
 
@@ -40,3 +42,4 @@ function showAlertSuccess() {
 function showAlertError() {
     document.getElementById("alert-danger").classList.add("show");
 } 
+form.reset()
